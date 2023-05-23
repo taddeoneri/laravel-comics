@@ -41,8 +41,8 @@ Route::get('/comics/{id}', function($id) {
     $comics = config('db.comics');
     if ($id >= 0 && $id < count($comics)) {
         $comic = $comics[$id];
-        return view('comic.showComic', compact('comic'), $data);
+        return view('comics.show', compact('comic'), $data);
     } else {
         abort('404');
     }
-})->name('comic.show');
+})->name('comics.show');
