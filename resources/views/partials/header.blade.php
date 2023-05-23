@@ -1,5 +1,5 @@
-<header class="bg-light text-uppercase py-3">
-    <div class="container bg-light d-flex justify-content-between align-items-center">
+<header class="bg-light text-uppercase">
+    <div class="container bg-light d-flex justify-content-between align-items-center py-3">
         <div>
             <img src="/img/dc-logo.png" alt="Logo">
         </div>

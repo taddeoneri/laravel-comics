@@ -18,25 +18,19 @@
 <body>
     @include('partials.header')
 
-    {{-- <main>
-        <section class="bg-dark">
-            <div class="container py-4">
-                @yield('content')
-            </div>
-        </section>
-        <section class="bg-primary p-2">
-            <div class="container text-light d-flex align-items-center justify-content-between p-4">
-                @foreach ($options as $option)
+    <main>
+        @yield('content')
+        <div class="main-bottom text-uppercase py-5 text-light">
+            <div class="container d-flex justify-content-between">
+                @foreach ($items as $i)
                     <div class="d-flex align-items-center">
-                        <div class="img-option">
-                            <img class="" src="/img/{{ $option['path'] }}" alt="{{ $option['alt'] }}">
-                        </div>
-                        <span class="text-uppercase">{{ $option['description'] }}</span>
+                        <img src="/img/{{ $i['url'] }}" alt="{{$i['text']}}">
+                        <p class="m-0">{{ $i['text'] }}</p>
                     </div>
                 @endforeach
             </div>
-        </section>
-    </main> --}}
+        </div>
+    </main>
 
     @include('partials.footer')
 </body>
